@@ -13,7 +13,7 @@ class MyProgressIndicator extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          MyText(txt: '${progress.toString()}%', setSize: 50),
+          MyText(txt: '${progress.toString()}%', size: 50, whatsFontWeight: FontWeight.bold,),
           SizedBox(
             width: 170,
             height: 70,

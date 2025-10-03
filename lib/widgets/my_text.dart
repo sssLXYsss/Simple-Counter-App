@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
 
 class MyText extends StatelessWidget {
-  const MyText({this.setSize = 18, required this.txt, super.key});
+  const MyText({
+    required this.txt,
+    this.size = 18,
+    this.whatsFontWeight = FontWeight.normal,
+    super.key,
+  });
 
+  final double size;
   final String txt;
-  final int setSize;
+  final FontWeight whatsFontWeight;
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Text(
-          txt,
-          softWrap: true,
-          style: TextStyle(
-            color: Colors.grey,
-            fontSize: setSize.toDouble(),
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
-      ],
+    return Text(
+      txt,
+      style: TextStyle(color: Colors.black87, fontWeight: whatsFontWeight, fontSize: size),
     );
   }
 }
